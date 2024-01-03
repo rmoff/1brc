@@ -1,0 +1,1 @@
+/usr/bin/time duckdb -c "COPY (SELECT * FROM READ_CSV('measurements.txt', header=false, columns= {'station_name':'VARCHAR','measurement':'double'}, delim=';')) TO 'measurements.parquet' (FORMAT PARQUET);"
